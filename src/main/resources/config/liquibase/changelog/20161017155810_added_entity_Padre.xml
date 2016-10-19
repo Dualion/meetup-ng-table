@@ -24,13 +24,19 @@
             <column name="nombre" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="apellidos" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
         </createTable>
-        
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/padres.csv"
+                  separator=";"
+                  tableName="padre">
+        </loadData>
+
     </changeSet>
 </databaseChangeLog>

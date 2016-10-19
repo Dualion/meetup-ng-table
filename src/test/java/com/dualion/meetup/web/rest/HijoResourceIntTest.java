@@ -41,8 +41,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(classes = MeetupApp.class)
 public class HijoResourceIntTest {
 
-    private static final String DEFAULT_NAME = "AAAAA";
-    private static final String UPDATED_NAME = "BBBBB";
+    private static final String DEFAULT_NOMBRE = "AAAAA";
+    private static final String UPDATED_NOMBRE = "BBBBB";
 
     private static final String DEFAULT_APELLIDOS = "AAAAA";
     private static final String UPDATED_APELLIDOS = "BBBBB";
@@ -87,7 +87,7 @@ public class HijoResourceIntTest {
      */
     public static Hijo createEntity(EntityManager em) {
         Hijo hijo = new Hijo()
-                .name(DEFAULT_NAME)
+                .nombre(DEFAULT_NOMBRE)
                 .apellidos(DEFAULT_APELLIDOS);
         return hijo;
     }
@@ -114,7 +114,7 @@ public class HijoResourceIntTest {
         List<Hijo> hijos = hijoRepository.findAll();
         assertThat(hijos).hasSize(databaseSizeBeforeCreate + 1);
         Hijo testHijo = hijos.get(hijos.size() - 1);
-        assertThat(testHijo.getName()).isEqualTo(DEFAULT_NAME);
+        assertThat(testHijo.getNombre()).isEqualTo(DEFAULT_NOMBRE);
         assertThat(testHijo.getApellidos()).isEqualTo(DEFAULT_APELLIDOS);
     }
 
@@ -129,7 +129,7 @@ public class HijoResourceIntTest {
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
                 .andExpect(jsonPath("$.[*].id").value(hasItem(hijo.getId().intValue())))
-                .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME.toString())))
+                .andExpect(jsonPath("$.[*].nombre").value(hasItem(DEFAULT_NOMBRE.toString())))
                 .andExpect(jsonPath("$.[*].apellidos").value(hasItem(DEFAULT_APELLIDOS.toString())));
     }
 
@@ -144,7 +144,7 @@ public class HijoResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(hijo.getId().intValue()))
-            .andExpect(jsonPath("$.name").value(DEFAULT_NAME.toString()))
+            .andExpect(jsonPath("$.nombre").value(DEFAULT_NOMBRE.toString()))
             .andExpect(jsonPath("$.apellidos").value(DEFAULT_APELLIDOS.toString()));
     }
 
@@ -166,7 +166,7 @@ public class HijoResourceIntTest {
         // Update the hijo
         Hijo updatedHijo = hijoRepository.findOne(hijo.getId());
         updatedHijo
-                .name(UPDATED_NAME)
+                .nombre(UPDATED_NOMBRE)
                 .apellidos(UPDATED_APELLIDOS);
         HijoDTO hijoDTO = hijoMapper.hijoToHijoDTO(updatedHijo);
 
@@ -179,7 +179,7 @@ public class HijoResourceIntTest {
         List<Hijo> hijos = hijoRepository.findAll();
         assertThat(hijos).hasSize(databaseSizeBeforeUpdate);
         Hijo testHijo = hijos.get(hijos.size() - 1);
-        assertThat(testHijo.getName()).isEqualTo(UPDATED_NAME);
+        assertThat(testHijo.getNombre()).isEqualTo(UPDATED_NOMBRE);
         assertThat(testHijo.getApellidos()).isEqualTo(UPDATED_APELLIDOS);
     }
 

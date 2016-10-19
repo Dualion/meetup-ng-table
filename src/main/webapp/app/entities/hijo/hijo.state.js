@@ -124,7 +124,7 @@
                     resolve: {
                         entity: function () {
                             return {
-                                name: null,
+                                nombre: null,
                                 apellidos: null,
                                 id: null
                             };

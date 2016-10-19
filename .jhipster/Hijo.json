@@ -10,7 +10,7 @@
     ],
     "fields": [
         {
-            "fieldName": "name",
+            "fieldName": "nombre",
             "fieldType": "String"
         },
         {

@@ -21,20 +21,26 @@
             <column name="id" type="bigint" autoIncrement="${autoIncrement}">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="name" type="varchar(255)">
+            <column name="nombre" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="apellidos" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="padre_id" type="bigint">
                 <constraints nullable="true" />
             </column>
 
             <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
         </createTable>
-        
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/hijos.csv"
+                  separator=";"
+                  tableName="hijo">
+        </loadData>
+
     </changeSet>
 </databaseChangeLog>

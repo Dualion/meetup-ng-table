@@ -13,7 +13,7 @@ public class HijoDTO implements Serializable {
 
     private Long id;
 
-    private String name;
+    private String nombre;
 
     private String apellidos;
 
@@ -27,12 +27,12 @@ public class HijoDTO implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
-    public String getName() {
-        return name;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
     public String getApellidos() {
         return apellidos;
@@ -75,7 +75,7 @@ public class HijoDTO implements Serializable {
     public String toString() {
         return "HijoDTO{" +
             "id=" + id +
-            ", name='" + name + "'" +
+            ", nombre='" + nombre + "'" +
             ", apellidos='" + apellidos + "'" +
             '}';
     }

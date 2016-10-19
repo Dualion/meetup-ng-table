@@ -19,7 +19,7 @@
             <thead>
                 <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
                     <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="name"><span data-translate="meetupApp.hijo.name">Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nombre"><span data-translate="meetupApp.hijo.nombre">Nombre</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="apellidos"><span data-translate="meetupApp.hijo.apellidos">Apellidos</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="padreId"><span data-translate="meetupApp.hijo.padre">Padre</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
@@ -28,7 +28,7 @@
             <tbody>
                 <tr ng-repeat="hijo in vm.hijos track by hijo.id">
                     <td><a ui-sref="hijo-detail({id:hijo.id})">{{hijo.id}}</a></td>
-                    <td>{{hijo.name}}</td>
+                    <td>{{hijo.nombre}}</td>
                     <td>{{hijo.apellidos}}</td>
                     <td>
                         <a ui-sref="padre-detail({id:hijo.padreId})">{{hijo.padreId}}</a>

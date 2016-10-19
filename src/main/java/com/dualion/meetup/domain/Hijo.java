@@ -21,8 +21,8 @@ public class Hijo implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "nombre")
+    private String nombre;
 
     @Column(name = "apellidos")
     private String apellidos;
@@ -38,17 +38,17 @@ public class Hijo implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNombre() {
+        return nombre;
     }
 
-    public Hijo name(String name) {
-        this.name = name;
+    public Hijo nombre(String nombre) {
+        this.nombre = nombre;
         return this;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getApellidos() {
@@ -101,7 +101,7 @@ public class Hijo implements Serializable {
     public String toString() {
         return "Hijo{" +
             "id=" + id +
-            ", name='" + name + "'" +
+            ", nombre='" + nombre + "'" +
             ", apellidos='" + apellidos + "'" +
             '}';
     }
