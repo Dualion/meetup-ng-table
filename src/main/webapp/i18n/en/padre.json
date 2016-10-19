@@ -1,0 +1,24 @@
+{
+    "meetupApp": {
+        "padre" : {
+            "home": {
+                "title": "Padres",
+                "createLabel": "Create a new Padre",
+                "createOrEditLabel": "Create or edit a Padre",
+                "search": "Search for Padre"
+            },
+            "created": "A new Padre is created with identifier {{ param }}",
+            "updated": "A Padre is updated with identifier {{ param }}",
+            "deleted": "A Padre is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Padre {{ id }}?"
+            },
+            "detail": {
+                "title": "Padre"
+            },
+            "nombre": "Nombre",
+            "apellidos": "Apellidos",
+            "hijo": "Hijo"
+        }
+    }
+}

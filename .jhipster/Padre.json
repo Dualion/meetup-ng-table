@@ -1,0 +1,26 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "hijo",
+            "otherEntityName": "hijo",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "padre"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "apellidos",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161017155810",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "padre",
+    "pagination": "pagination"
+}

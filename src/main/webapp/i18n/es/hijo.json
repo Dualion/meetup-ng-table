@@ -1,0 +1,24 @@
+{
+    "meetupApp": {
+        "hijo" : {
+            "home": {
+                "title": "Hijos",
+                "createLabel": "Crear nuevo Hijo",
+                "createOrEditLabel": "Crear o editar Hijo",
+                "search": "Search for Hijo"
+            },
+            "created": "Un nuevo Hijo ha sido creado con el identificador {{ param }}",
+            "updated": "Un Hijo ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Hijo ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Hijo {{ id }}?"
+            },
+            "detail": {
+                "title": "Hijo"
+            },
+            "name": "Name",
+            "apellidos": "Apellidos",
+            "padre": "Padre"
+        }
+    }
+}
